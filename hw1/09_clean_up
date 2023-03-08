@@ -1,0 +1,10 @@
+rm -rf *.history
+rm -rf *.key
+rm -rf novas.rc
+rm -rf novas.fsdb
+rm -rf *.log
+rm -rf INCA_libs nWaveLog
+rm -rf *~
+rm -rf nWaveLog
+rm -rf BSSLib.lib++
+rm -rf novas.conf
