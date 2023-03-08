@@ -1,1 +1,0 @@
-ncverilog -f rtl.f +define+p0 +access+rw
