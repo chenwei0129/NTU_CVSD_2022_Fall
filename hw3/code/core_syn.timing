@@ -1,0 +1,57 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : core
+Version: R-2020.09-SP5
+Date   : Sat Oct 29 17:48:49 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: i_op_mode[2]
+              (input port clocked by i_clk)
+  Endpoint: addr_SRAM_reg[2]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  core               tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     1.50       2.00 f
+  i_op_mode[2] (in)                        0.00       2.00 f
+  U651/Y (NAND2X4)                         0.12       2.12 r
+  U767/Y (NOR2X8)                          0.09       2.21 f
+  U713/Y (INVX12)                          0.12       2.33 r
+  U499/Y (INVX20)                          0.08       2.41 f
+  U878/Y (OA22X4)                          0.25       2.67 f
+  U949/Y (AOI32X2)                         0.27       2.93 r
+  U625/Y (NAND2X2)                         0.13       3.06 f
+  U680/Y (NAND4X2)                         0.16       3.22 r
+  addr_SRAM_reg[2]/D (DFFRX4)              0.00       3.22 r
+  data arrival time                                   3.22
+
+  clock i_clk (rise edge)                  3.00       3.00
+  clock network delay (ideal)              0.50       3.50
+  clock uncertainty                       -0.10       3.40
+  addr_SRAM_reg[2]/CK (DFFRX4)             0.00       3.40 r
+  library setup time                      -0.18       3.22
+  data required time                                  3.22
+  -----------------------------------------------------------
+  data required time                                  3.22
+  data arrival time                                  -3.22
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
