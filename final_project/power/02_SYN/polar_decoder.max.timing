@@ -1,0 +1,1837 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : polar_decoder
+Version: R-2020.09-SP5
+Date   : Sat Dec 17 20:33:29 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE111/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14152/Y (INVXL)                                        0.13       2.22 f
+  U13557/Y (AND2X4)                                       0.21       2.43 f
+  U21459/Y (CLKBUFX3)                                     0.22       2.66 f
+  U14751/Y (CLKBUFX2)                                     0.32       2.97 f
+  U14002/Y (BUFX2)                                        0.34       3.32 f
+  U17575/Y (CLKBUFX3)                                     0.40       3.71 f
+  U17162/Y (CLKBUFX3)                                     0.92       4.63 f
+  U24417/Y (AOI222XL)                                     0.91       5.54 r
+  U15436/Y (INVX3)                                        0.29       5.83 f
+  PE111/llr_2_i[1] (PE_144)                               0.00       5.83 f
+  PE111/U138/Y (CLKINVX1)                                 0.17       5.99 r
+  PE111/add_0_root_add_15_ni/A[1] (PE_144_DW01_inc_2_DW01_inc_662)
+                                                          0.00       5.99 r
+  PE111/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)           0.35       6.34 r
+  PE111/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)           0.29       6.64 r
+  PE111/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)           0.27       6.91 r
+  PE111/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)           0.27       7.19 r
+  PE111/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)           0.27       7.46 r
+  PE111/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)           0.27       7.73 r
+  PE111/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)           0.27       8.01 r
+  PE111/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)           0.26       8.27 r
+  PE111/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)            0.36       8.63 r
+  PE111/add_0_root_add_15_ni/SUM[9] (PE_144_DW01_inc_2_DW01_inc_662)
+                                                          0.00       8.63 r
+  PE111/U22/Y (AO22X1)                                    0.65       9.28 r
+  PE111/U180/Y (OAI21XL)                                  0.40       9.68 f
+  PE111/U181/Y (OAI22XL)                                  0.58      10.26 r
+  PE111/U182/Y (AOI2BB2X1)                                0.24      10.50 f
+  PE111/U164/Y (OAI221X4)                                 0.55      11.05 r
+  PE111/U26/Y (INVX6)                                     0.23      11.28 f
+  PE111/U77/Y (AO22X1)                                    0.43      11.71 f
+  PE111/U25/Y (CLKINVX1)                                  0.22      11.93 r
+  PE111/add_22/A[0] (PE_144_DW01_inc_0_DW01_inc_152)      0.00      11.93 r
+  PE111/add_22/U1_1_1/CO (ADDHXL)                         0.37      12.30 r
+  PE111/add_22/U1_1_2/CO (ADDHX1)                         0.28      12.58 r
+  PE111/add_22/U1_1_3/CO (ADDHXL)                         0.36      12.94 r
+  PE111/add_22/U1_1_4/CO (ADDHX1)                         0.28      13.22 r
+  PE111/add_22/U1_1_5/CO (ADDHXL)                         0.36      13.59 r
+  PE111/add_22/U1_1_6/CO (ADDHX1)                         0.28      13.87 r
+  PE111/add_22/U1_1_7/CO (ADDHXL)                         0.36      14.23 r
+  PE111/add_22/U1_1_8/CO (ADDHX1)                         0.29      14.53 r
+  PE111/add_22/U1_1_9/CO (ADDHX1)                         0.27      14.80 r
+  PE111/add_22/U1_1_10/CO (ADDHX1)                        0.25      15.05 r
+  PE111/add_22/U1/Y (CLKINVX1)                            0.14      15.19 f
+  PE111/add_22/SUM[11] (PE_144_DW01_inc_0_DW01_inc_152)
+                                                          0.00      15.19 f
+  PE111/U29/Y (AOI32XL)                                   0.42      15.61 r
+  PE111/U30/Y (OAI21XL)                                   0.28      15.90 f
+  PE111/result_o_reg[11]/D (DFFQX1)                       0.00      15.90 f
+  data arrival time                                                 15.90
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE111/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE38/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U13976/Y (CLKBUFX2)                                     0.29       1.72 f
+  U13953/Y (BUFX2)                                        0.50       2.22 f
+  U17587/Y (CLKBUFX3)                                     0.93       3.14 f
+  U17166/Y (CLKBUFX3)                                     0.73       3.88 f
+  U17008/Y (BUFX4)                                        0.61       4.49 f
+  U14189/Y (AO22X1)                                       0.77       5.26 f
+  PE38/llr_1_i[0] (PE_217)                                0.00       5.26 f
+  PE38/U167/Y (CLKINVX1)                                  0.31       5.57 r
+  PE38/add_0_root_add_12_ni/A[0] (PE_217_DW01_inc_1_DW01_inc_590)
+                                                          0.00       5.57 r
+  PE38/add_0_root_add_12_ni/U1_1_1/CO (ADDHXL)            0.35       5.92 r
+  PE38/add_0_root_add_12_ni/U1_1_2/CO (ADDHXL)            0.35       6.27 r
+  PE38/add_0_root_add_12_ni/U1_1_3/CO (ADDHXL)            0.35       6.62 r
+  PE38/add_0_root_add_12_ni/U1_1_4/CO (ADDHXL)            0.35       6.98 r
+  PE38/add_0_root_add_12_ni/U1_1_5/CO (ADDHXL)            0.35       7.33 r
+  PE38/add_0_root_add_12_ni/U1_1_6/CO (ADDHXL)            0.35       7.68 r
+  PE38/add_0_root_add_12_ni/U1_1_7/CO (ADDHXL)            0.35       8.04 r
+  PE38/add_0_root_add_12_ni/U1_1_8/CO (ADDHXL)            0.35       8.39 r
+  PE38/add_0_root_add_12_ni/U1_1_9/S (ADDHXL)             0.41       8.80 r
+  PE38/add_0_root_add_12_ni/SUM[9] (PE_217_DW01_inc_1_DW01_inc_590)
+                                                          0.00       8.80 r
+  PE38/U39/Y (AO22X1)                                     0.46       9.26 r
+  PE38/U130/Y (CLKINVX1)                                  0.33       9.59 f
+  PE38/U180/Y (OAI21XL)                                   0.76      10.36 r
+  PE38/U181/Y (OAI22XL)                                   0.37      10.73 f
+  PE38/U182/Y (AOI2BB2X1)                                 0.35      11.08 r
+  PE38/U166/Y (OAI221X4)                                  0.50      11.58 f
+  PE38/U85/Y (AO22X1)                                     0.52      12.11 f
+  PE38/U31/Y (CLKINVX1)                                   0.22      12.33 r
+  PE38/add_22/A[0] (PE_217_DW01_inc_0_DW01_inc_225)       0.00      12.33 r
+  PE38/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.69 r
+  PE38/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.98 r
+  PE38/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.34 r
+  PE38/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.62 r
+  PE38/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.98 r
+  PE38/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.26 r
+  PE38/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.63 r
+  PE38/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.92 r
+  PE38/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.20 r
+  PE38/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.45 r
+  PE38/add_22/U1/Y (CLKINVX1)                             0.16      15.61 f
+  PE38/add_22/SUM[11] (PE_217_DW01_inc_0_DW01_inc_225)
+                                                          0.00      15.61 f
+  PE38/U40/Y (AOI32X2)                                    0.22      15.83 r
+  PE38/U38/Y (OAI21X2)                                    0.14      15.96 f
+  PE38/result_o_reg[11]/D (DFFQXL)                        0.00      15.96 f
+  data arrival time                                                 15.96
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE38/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.24      15.96
+  data required time                                                15.96
+  --------------------------------------------------------------------------
+  data required time                                                15.96
+  data arrival time                                                -15.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE110/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14152/Y (INVXL)                                        0.13       2.22 f
+  U13557/Y (AND2X4)                                       0.21       2.43 f
+  U21459/Y (CLKBUFX3)                                     0.22       2.66 f
+  U14751/Y (CLKBUFX2)                                     0.32       2.97 f
+  U14002/Y (BUFX2)                                        0.34       3.32 f
+  U17575/Y (CLKBUFX3)                                     0.40       3.71 f
+  U17162/Y (CLKBUFX3)                                     0.92       4.63 f
+  U24416/Y (AOI222XL)                                     0.91       5.54 r
+  U15435/Y (INVX3)                                        0.29       5.83 f
+  PE110/llr_2_i[1] (PE_145)                               0.00       5.83 f
+  PE110/U136/Y (CLKINVX1)                                 0.17       5.99 r
+  PE110/add_0_root_add_15_ni/A[1] (PE_145_DW01_inc_2_DW01_inc_661)
+                                                          0.00       5.99 r
+  PE110/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)           0.35       6.34 r
+  PE110/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)           0.29       6.64 r
+  PE110/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)           0.27       6.91 r
+  PE110/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)           0.27       7.19 r
+  PE110/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)           0.27       7.46 r
+  PE110/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)           0.27       7.73 r
+  PE110/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)           0.27       8.01 r
+  PE110/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)           0.26       8.27 r
+  PE110/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)            0.36       8.63 r
+  PE110/add_0_root_add_15_ni/SUM[9] (PE_145_DW01_inc_2_DW01_inc_661)
+                                                          0.00       8.63 r
+  PE110/U22/Y (AO22X1)                                    0.65       9.28 r
+  PE110/U180/Y (OAI21XL)                                  0.40       9.68 f
+  PE110/U181/Y (OAI22XL)                                  0.58      10.26 r
+  PE110/U182/Y (AOI2BB2X1)                                0.24      10.50 f
+  PE110/U163/Y (OAI221X4)                                 0.55      11.05 r
+  PE110/U26/Y (INVX6)                                     0.23      11.28 f
+  PE110/U75/Y (AO22X1)                                    0.43      11.71 f
+  PE110/U25/Y (CLKINVX1)                                  0.22      11.93 r
+  PE110/add_22/A[0] (PE_145_DW01_inc_0_DW01_inc_153)      0.00      11.93 r
+  PE110/add_22/U1_1_1/CO (ADDHXL)                         0.37      12.30 r
+  PE110/add_22/U1_1_2/CO (ADDHX1)                         0.28      12.58 r
+  PE110/add_22/U1_1_3/CO (ADDHXL)                         0.36      12.94 r
+  PE110/add_22/U1_1_4/CO (ADDHX1)                         0.28      13.22 r
+  PE110/add_22/U1_1_5/CO (ADDHXL)                         0.36      13.59 r
+  PE110/add_22/U1_1_6/CO (ADDHX1)                         0.28      13.87 r
+  PE110/add_22/U1_1_7/CO (ADDHXL)                         0.36      14.23 r
+  PE110/add_22/U1_1_8/CO (ADDHX1)                         0.29      14.53 r
+  PE110/add_22/U1_1_9/CO (ADDHX1)                         0.27      14.80 r
+  PE110/add_22/U1_1_10/CO (ADDHX1)                        0.25      15.05 r
+  PE110/add_22/U1/Y (CLKINVX1)                            0.14      15.19 f
+  PE110/add_22/SUM[11] (PE_145_DW01_inc_0_DW01_inc_153)
+                                                          0.00      15.19 f
+  PE110/U30/Y (AOI32XL)                                   0.42      15.61 r
+  PE110/U31/Y (OAI21XL)                                   0.28      15.90 f
+  PE110/result_o_reg[11]/D (DFFQX1)                       0.00      15.90 f
+  data arrival time                                                 15.90
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE110/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE86/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13968/Y (BUFX2)                                        0.54       3.76 f
+  U16980/Y (CLKBUFX3)                                     0.95       4.72 f
+  U24230/Y (AOI222XL)                                     0.95       5.66 r
+  U24229/Y (INVX3)                                        0.37       6.03 f
+  PE86/llr_2_i[0] (PE_169)                                0.00       6.03 f
+  PE86/U17/Y (CLKINVX3)                                   0.17       6.20 r
+  PE86/add_0_root_add_15_ni/A[0] (PE_169_DW01_inc_2_DW01_inc_700)
+                                                          0.00       6.20 r
+  PE86/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.36       6.56 r
+  PE86/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.29       6.86 r
+  PE86/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.13 r
+  PE86/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.40 r
+  PE86/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.68 r
+  PE86/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.95 r
+  PE86/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.22 r
+  PE86/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.48 r
+  PE86/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.84 r
+  PE86/add_0_root_add_15_ni/SUM[9] (PE_169_DW01_inc_2_DW01_inc_700)
+                                                          0.00       8.84 r
+  PE86/U22/Y (AO22X1)                                     0.65       9.49 r
+  PE86/U180/Y (OAI21XL)                                   0.40       9.90 f
+  PE86/U181/Y (OAI22XL)                                   0.58      10.48 r
+  PE86/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE86/U164/Y (OAI221X4)                                  0.54      11.26 r
+  PE86/U26/Y (INVX3)                                      0.34      11.59 f
+  PE86/U79/Y (AO22X1)                                     0.47      12.06 f
+  PE86/U25/Y (CLKINVX1)                                   0.22      12.29 r
+  PE86/add_22/A[0] (PE_169_DW01_inc_0_DW01_inc_177)       0.00      12.29 r
+  PE86/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE86/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE86/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.30 r
+  PE86/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.58 r
+  PE86/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE86/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE86/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.59 r
+  PE86/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE86/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE86/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.41 r
+  PE86/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE86/add_22/SUM[11] (PE_169_DW01_inc_0_DW01_inc_177)
+                                                          0.00      15.57 f
+  PE86/U40/Y (AOI32X2)                                    0.20      15.77 r
+  PE86/U39/Y (OAI21X1)                                    0.17      15.95 f
+  PE86/result_o_reg[11]/D (DFFQXL)                        0.00      15.95 f
+  data arrival time                                                 15.95
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE86/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE87/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13968/Y (BUFX2)                                        0.54       3.76 f
+  U16988/Y (CLKBUFX3)                                     0.95       4.72 f
+  U24232/Y (AOI222XL)                                     0.95       5.66 r
+  U24231/Y (INVX3)                                        0.37       6.03 f
+  PE87/llr_2_i[0] (PE_168)                                0.00       6.03 f
+  PE87/U17/Y (CLKINVX3)                                   0.17       6.20 r
+  PE87/add_0_root_add_15_ni/A[0] (PE_168_DW01_inc_2_DW01_inc_701)
+                                                          0.00       6.20 r
+  PE87/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.36       6.56 r
+  PE87/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.29       6.86 r
+  PE87/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.13 r
+  PE87/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.40 r
+  PE87/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.68 r
+  PE87/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.95 r
+  PE87/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.22 r
+  PE87/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.48 r
+  PE87/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.84 r
+  PE87/add_0_root_add_15_ni/SUM[9] (PE_168_DW01_inc_2_DW01_inc_701)
+                                                          0.00       8.84 r
+  PE87/U22/Y (AO22X1)                                     0.65       9.49 r
+  PE87/U180/Y (OAI21XL)                                   0.40       9.90 f
+  PE87/U181/Y (OAI22XL)                                   0.58      10.48 r
+  PE87/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE87/U164/Y (OAI221X4)                                  0.54      11.26 r
+  PE87/U26/Y (INVX3)                                      0.34      11.59 f
+  PE87/U79/Y (AO22X1)                                     0.47      12.06 f
+  PE87/U25/Y (CLKINVX1)                                   0.22      12.29 r
+  PE87/add_22/A[0] (PE_168_DW01_inc_0_DW01_inc_176)       0.00      12.29 r
+  PE87/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE87/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE87/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.30 r
+  PE87/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.58 r
+  PE87/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE87/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE87/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.59 r
+  PE87/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE87/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE87/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.41 r
+  PE87/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE87/add_22/SUM[11] (PE_168_DW01_inc_0_DW01_inc_176)
+                                                          0.00      15.57 f
+  PE87/U40/Y (AOI32X2)                                    0.20      15.77 r
+  PE87/U39/Y (OAI21X1)                                    0.17      15.95 f
+  PE87/result_o_reg[11]/D (DFFQXL)                        0.00      15.95 f
+  data arrival time                                                 15.95
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE87/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE88/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13968/Y (BUFX2)                                        0.54       3.76 f
+  U16981/Y (CLKBUFX3)                                     0.95       4.72 f
+  U24234/Y (AOI222XL)                                     0.95       5.66 r
+  U24233/Y (INVX3)                                        0.37       6.03 f
+  PE88/llr_2_i[0] (PE_167)                                0.00       6.03 f
+  PE88/U17/Y (CLKINVX3)                                   0.17       6.20 r
+  PE88/add_0_root_add_15_ni/A[0] (PE_167_DW01_inc_2_DW01_inc_702)
+                                                          0.00       6.20 r
+  PE88/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.36       6.56 r
+  PE88/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.29       6.86 r
+  PE88/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.13 r
+  PE88/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.40 r
+  PE88/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.68 r
+  PE88/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.95 r
+  PE88/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.22 r
+  PE88/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.48 r
+  PE88/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.84 r
+  PE88/add_0_root_add_15_ni/SUM[9] (PE_167_DW01_inc_2_DW01_inc_702)
+                                                          0.00       8.84 r
+  PE88/U22/Y (AO22X1)                                     0.65       9.49 r
+  PE88/U180/Y (OAI21XL)                                   0.40       9.90 f
+  PE88/U181/Y (OAI22XL)                                   0.58      10.48 r
+  PE88/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE88/U164/Y (OAI221X4)                                  0.54      11.26 r
+  PE88/U26/Y (INVX3)                                      0.34      11.59 f
+  PE88/U79/Y (AO22X1)                                     0.47      12.06 f
+  PE88/U25/Y (CLKINVX1)                                   0.22      12.29 r
+  PE88/add_22/A[0] (PE_167_DW01_inc_0_DW01_inc_175)       0.00      12.29 r
+  PE88/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE88/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE88/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.30 r
+  PE88/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.58 r
+  PE88/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE88/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE88/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.59 r
+  PE88/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE88/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE88/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.41 r
+  PE88/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE88/add_22/SUM[11] (PE_167_DW01_inc_0_DW01_inc_175)
+                                                          0.00      15.57 f
+  PE88/U40/Y (AOI32X2)                                    0.20      15.77 r
+  PE88/U39/Y (OAI21X1)                                    0.17      15.95 f
+  PE88/result_o_reg[11]/D (DFFQXL)                        0.00      15.95 f
+  data arrival time                                                 15.95
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE88/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE81/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14152/Y (INVXL)                                        0.13       2.22 f
+  U13557/Y (AND2X4)                                       0.21       2.43 f
+  U14253/Y (CLKBUFX2)                                     0.31       2.75 f
+  U13988/Y (CLKBUFX2)                                     0.46       3.21 f
+  U18266/Y (CLKBUFX3)                                     0.58       3.78 f
+  U17578/Y (CLKBUFX3)                                     0.97       4.75 f
+  U24382/Y (AOI222XL)                                     0.81       5.56 r
+  U13833/Y (INVX1)                                        0.45       6.01 f
+  PE81/llr_2_i[1] (PE_174)                                0.00       6.01 f
+  PE81/U140/Y (CLKINVX1)                                  0.20       6.20 r
+  PE81/add_0_root_add_15_ni/A[1] (PE_174_DW01_inc_2_DW01_inc_695)
+                                                          0.00       6.20 r
+  PE81/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.36       6.56 r
+  PE81/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.29       6.85 r
+  PE81/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.13 r
+  PE81/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.40 r
+  PE81/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.68 r
+  PE81/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.95 r
+  PE81/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.22 r
+  PE81/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.48 r
+  PE81/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.84 r
+  PE81/add_0_root_add_15_ni/SUM[9] (PE_174_DW01_inc_2_DW01_inc_695)
+                                                          0.00       8.84 r
+  PE81/U20/Y (AO22X1)                                     0.65       9.49 r
+  PE81/U180/Y (OAI21XL)                                   0.40       9.90 f
+  PE81/U181/Y (OAI22XL)                                   0.58      10.48 r
+  PE81/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE81/U164/Y (OAI221X4)                                  0.54      11.26 r
+  PE81/U24/Y (INVX3)                                      0.34      11.59 f
+  PE81/U79/Y (AO22X1)                                     0.47      12.06 f
+  PE81/U23/Y (CLKINVX1)                                   0.22      12.29 r
+  PE81/add_22/A[0] (PE_174_DW01_inc_0_DW01_inc_182)       0.00      12.29 r
+  PE81/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE81/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE81/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.30 r
+  PE81/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.58 r
+  PE81/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE81/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE81/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.58 r
+  PE81/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE81/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE81/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.40 r
+  PE81/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE81/add_22/SUM[11] (PE_174_DW01_inc_0_DW01_inc_182)
+                                                          0.00      15.57 f
+  PE81/U39/Y (AOI32X2)                                    0.20      15.77 r
+  PE81/U38/Y (OAI21X1)                                    0.17      15.94 f
+  PE81/result_o_reg[11]/D (DFFQXL)                        0.00      15.94 f
+  data arrival time                                                 15.94
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE81/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE72/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U17572/Y (CLKBUFX3)                                     0.70       3.60 f
+  U13121/Y (CLKBUFX2)                                     0.42       4.02 f
+  U13120/Y (BUFX4)                                        0.48       4.50 f
+  U24212/Y (AOI222XL)                                     0.73       5.23 r
+  U13823/Y (INVX1)                                        0.57       5.80 f
+  PE72/llr_2_i[0] (PE_183)                                0.00       5.80 f
+  PE72/U52/Y (CLKINVX4)                                   0.17       5.97 r
+  PE72/add_0_root_add_15_ni/A[0] (PE_183_DW01_inc_2_DW01_inc_686)
+                                                          0.00       5.97 r
+  PE72/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.33       6.30 r
+  PE72/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)            0.35       6.65 r
+  PE72/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)            0.35       7.01 r
+  PE72/add_0_root_add_15_ni/U1_1_4/CO (ADDHXL)            0.38       7.39 r
+  PE72/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.30       7.68 r
+  PE72/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.96 r
+  PE72/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.23 r
+  PE72/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.49 r
+  PE72/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.85 r
+  PE72/add_0_root_add_15_ni/SUM[9] (PE_183_DW01_inc_2_DW01_inc_686)
+                                                          0.00       8.85 r
+  PE72/U20/Y (AO22X1)                                     0.65       9.50 r
+  PE72/U180/Y (OAI21XL)                                   0.40       9.90 f
+  PE72/U181/Y (OAI22XL)                                   0.58      10.48 r
+  PE72/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE72/U163/Y (OAI221X4)                                  0.54      11.26 r
+  PE72/U23/Y (INVX3)                                      0.34      11.60 f
+  PE72/U78/Y (AO22X1)                                     0.47      12.07 f
+  PE72/U21/Y (CLKINVX1)                                   0.22      12.29 r
+  PE72/add_22/A[0] (PE_183_DW01_inc_0_DW01_inc_191)       0.00      12.29 r
+  PE72/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.66 r
+  PE72/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.94 r
+  PE72/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.30 r
+  PE72/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.58 r
+  PE72/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.95 r
+  PE72/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.23 r
+  PE72/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.59 r
+  PE72/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.89 r
+  PE72/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.16 r
+  PE72/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.41 r
+  PE72/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE72/add_22/SUM[11] (PE_183_DW01_inc_0_DW01_inc_191)
+                                                          0.00      15.57 f
+  PE72/U29/Y (AOI32X2)                                    0.20      15.78 r
+  PE72/U22/Y (OAI21X1)                                    0.17      15.95 f
+  PE72/result_o_reg[11]/D (DFFQXL)                        0.00      15.95 f
+  data arrival time                                                 15.95
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE72/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE7/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14253/Y (CLKBUFX2)                                     0.28       2.96 r
+  U13186/Y (NOR2X2)                                       0.15       3.12 f
+  U13105/Y (CLKINVX8)                                     0.08       3.20 r
+  U13106/Y (INVX12)                                       0.06       3.26 f
+  U13162/Y (INVX16)                                       0.08       3.34 r
+  U13164/Y (INVX20)                                       0.15       3.48 f
+  U13276/Y (AND2X2)                                       0.35       3.83 f
+  U13277/Y (BUFX12)                                       0.18       4.01 f
+  U13279/Y (BUFX20)                                       0.10       4.11 f
+  U13282/Y (BUFX20)                                       0.09       4.21 f
+  U13226/Y (BUFX20)                                       0.11       4.32 f
+  U13265/Y (CLKINVX12)                                    0.06       4.38 r
+  U13273/Y (INVX4)                                        0.23       4.61 f
+  U23033/Y (AOI221XL)                                     0.66       5.27 r
+  U23032/Y (NAND2X1)                                      0.45       5.72 f
+  PE7/llr_2_i[1] (PE_248)                                 0.00       5.72 f
+  PE7/U16/Y (CLKINVX1)                                    0.21       5.93 r
+  PE7/add_0_root_add_15_ni/A[1] (PE_248_DW01_inc_2_DW01_inc_765)
+                                                          0.00       5.93 r
+  PE7/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)             0.33       6.26 r
+  PE7/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)             0.35       6.61 r
+  PE7/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)             0.35       6.96 r
+  PE7/add_0_root_add_15_ni/U1_1_4/CO (ADDHXL)             0.38       7.34 r
+  PE7/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)             0.30       7.64 r
+  PE7/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)             0.27       7.91 r
+  PE7/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)             0.27       8.19 r
+  PE7/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)             0.26       8.45 r
+  PE7/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)              0.36       8.80 r
+  PE7/add_0_root_add_15_ni/SUM[9] (PE_248_DW01_inc_2_DW01_inc_765)
+                                                          0.00       8.80 r
+  PE7/U27/Y (AO22X1)                                      0.68       9.48 r
+  PE7/U37/Y (OAI21X1)                                     0.31       9.79 f
+  PE7/U23/Y (OAI22XL)                                     0.55      10.35 r
+  PE7/U182/Y (AOI2BB2X1)                                  0.24      10.59 f
+  PE7/U168/Y (OAI221X4)                                   0.55      11.14 r
+  PE7/U34/Y (INVX6)                                       0.23      11.36 f
+  PE7/U84/Y (AO22X1)                                      0.43      11.79 f
+  PE7/U30/Y (CLKINVX1)                                    0.22      12.02 r
+  PE7/add_22/A[0] (PE_248_DW01_inc_0_DW01_inc_256)        0.00      12.02 r
+  PE7/add_22/U1_1_1/CO (ADDHXL)                           0.37      12.38 r
+  PE7/add_22/U1_1_2/CO (ADDHX1)                           0.28      12.66 r
+  PE7/add_22/U1_1_3/CO (ADDHXL)                           0.34      13.00 r
+  PE7/add_22/U1_1_4/CO (ADDHXL)                           0.35      13.35 r
+  PE7/add_22/U1_1_5/CO (ADDHXL)                           0.38      13.73 r
+  PE7/add_22/U1_1_6/CO (ADDHX1)                           0.28      14.01 r
+  PE7/add_22/U1_1_7/CO (ADDHXL)                           0.34      14.35 r
+  PE7/add_22/U1_1_8/CO (ADDHXL)                           0.38      14.73 r
+  PE7/add_22/U1_1_9/CO (ADDHX1)                           0.30      15.03 r
+  PE7/add_22/U1_1_10/CO (ADDHX1)                          0.25      15.28 r
+  PE7/add_22/U1/Y (CLKINVX1)                              0.15      15.43 f
+  PE7/add_22/SUM[11] (PE_248_DW01_inc_0_DW01_inc_256)     0.00      15.43 f
+  PE7/U33/Y (AOI32X1)                                     0.27      15.69 r
+  PE7/U32/Y (OAI21XL)                                     0.24      15.93 f
+  PE7/result_o_reg[11]/D (DFFQXL)                         0.00      15.93 f
+  data arrival time                                                 15.93
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE7/result_o_reg[11]/CK (DFFQXL)                        0.00      16.20 r
+  library setup time                                     -0.26      15.94
+  data required time                                                15.94
+  --------------------------------------------------------------------------
+  data required time                                                15.94
+  data arrival time                                                -15.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE99/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13973/Y (BUFX2)                                        0.41       3.64 f
+  U17145/Y (CLKBUFX3)                                     0.84       4.47 f
+  U24292/Y (AOI222XL)                                     0.93       5.40 r
+  U24291/Y (INVX3)                                        0.37       5.77 f
+  PE99/llr_2_i[0] (PE_156)                                0.00       5.77 f
+  PE99/U16/Y (INVX3)                                      0.18       5.95 r
+  PE99/add_0_root_add_15_ni/A[0] (PE_156_DW01_inc_2_DW01_inc_713)
+                                                          0.00       5.95 r
+  PE99/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.36       6.30 r
+  PE99/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.29       6.60 r
+  PE99/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       6.87 r
+  PE99/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.15 r
+  PE99/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.42 r
+  PE99/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.69 r
+  PE99/add_0_root_add_15_ni/U1_1_7/S (ADDHX1)             0.21       7.90 f
+  PE99/add_0_root_add_15_ni/SUM[7] (PE_156_DW01_inc_2_DW01_inc_713)
+                                                          0.00       7.90 f
+  PE99/U138/Y (AO22X1)                                    0.52       8.42 f
+  PE99/U41/Y (NAND2BXL)                                   0.54       8.97 r
+  PE99/U40/Y (OAI222X1)                                   0.43       9.40 f
+  PE99/U166/Y (OAI222XL)                                  0.89      10.29 r
+  PE99/U182/Y (AOI2BB2X1)                                 0.27      10.56 r
+  PE99/U164/Y (OAI221X4)                                  0.50      11.06 f
+  PE99/U78/Y (AO22X1)                                     0.53      11.58 f
+  PE99/U22/Y (CLKINVX1)                                   0.22      11.80 r
+  PE99/add_22/A[0] (PE_156_DW01_inc_0_DW01_inc_164)       0.00      11.80 r
+  PE99/add_22/U1_1_1/CO (ADDHXL)                          0.34      12.14 r
+  PE99/add_22/U1_1_2/CO (ADDHXL)                          0.35      12.50 r
+  PE99/add_22/U1_1_3/CO (ADDHXL)                          0.38      12.88 r
+  PE99/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.16 r
+  PE99/add_22/U1_1_5/CO (ADDHXL)                          0.34      13.50 r
+  PE99/add_22/U1_1_6/CO (ADDHXL)                          0.35      13.85 r
+  PE99/add_22/U1_1_7/CO (ADDHXL)                          0.38      14.23 r
+  PE99/add_22/U1_1_8/CO (ADDHX1)                          0.30      14.52 r
+  PE99/add_22/U1_1_9/CO (ADDHX1)                          0.27      14.80 r
+  PE99/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.05 r
+  PE99/add_22/U1/Y (CLKINVX1)                             0.14      15.19 f
+  PE99/add_22/SUM[11] (PE_156_DW01_inc_0_DW01_inc_164)
+                                                          0.00      15.19 f
+  PE99/U30/Y (AOI32XL)                                    0.42      15.61 r
+  PE99/U31/Y (OAI21XL)                                    0.28      15.89 f
+  PE99/result_o_reg[11]/D (DFFQX1)                        0.00      15.89 f
+  data arrival time                                                 15.89
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE99/result_o_reg[11]/CK (DFFQX1)                       0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE124/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13028/Y (CLKBUFX4)                                     0.86       4.09 f
+  U24281/Y (AOI222XL)                                     0.94       5.03 r
+  U24280/Y (INVX3)                                        0.37       5.39 f
+  PE124/llr_2_i[0] (PE_131)                               0.00       5.39 f
+  PE124/U16/Y (INVX3)                                     0.18       5.57 r
+  PE124/add_0_root_add_15_ni/A[0] (PE_131_DW01_inc_2_DW01_inc_675)
+                                                          0.00       5.57 r
+  PE124/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)           0.33       5.90 r
+  PE124/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)           0.35       6.26 r
+  PE124/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)           0.35       6.61 r
+  PE124/add_0_root_add_15_ni/U1_1_4/CO (ADDHXL)           0.38       6.99 r
+  PE124/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)           0.30       7.28 r
+  PE124/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)           0.27       7.56 r
+  PE124/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)           0.27       7.83 r
+  PE124/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)           0.26       8.09 r
+  PE124/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)            0.38       8.47 r
+  PE124/add_0_root_add_15_ni/SUM[9] (PE_131_DW01_inc_2_DW01_inc_675)
+                                                          0.00       8.47 r
+  PE124/U22/Y (AO22X2)                                    0.44       8.91 r
+  PE124/U180/Y (OAI21XL)                                  0.33       9.24 f
+  PE124/U181/Y (OAI22XL)                                  0.57       9.81 r
+  PE124/U182/Y (AOI2BB2X1)                                0.24      10.06 f
+  PE124/U166/Y (OAI221X4)                                 0.54      10.59 r
+  PE124/U24/Y (INVX3)                                     0.34      10.93 f
+  PE124/U79/Y (AO22X1)                                    0.47      11.40 f
+  PE124/U21/Y (CLKINVX1)                                  0.22      11.62 r
+  PE124/add_22/A[0] (PE_131_DW01_inc_0_DW01_inc_139)      0.00      11.62 r
+  PE124/add_22/U1_1_1/CO (ADDHXL)                         0.34      11.96 r
+  PE124/add_22/U1_1_2/CO (ADDHXL)                         0.35      12.32 r
+  PE124/add_22/U1_1_3/CO (ADDHXL)                         0.38      12.70 r
+  PE124/add_22/U1_1_4/CO (ADDHX1)                         0.28      12.98 r
+  PE124/add_22/U1_1_5/CO (ADDHXL)                         0.34      13.31 r
+  PE124/add_22/U1_1_6/CO (ADDHXL)                         0.35      13.67 r
+  PE124/add_22/U1_1_7/CO (ADDHXL)                         0.35      14.02 r
+  PE124/add_22/U1_1_8/CO (ADDHXL)                         0.38      14.40 r
+  PE124/add_22/U1_1_9/CO (ADDHX1)                         0.28      14.68 r
+  PE124/add_22/U1_1_10/CO (ADDHXL)                        0.32      15.00 r
+  PE124/add_22/U1/Y (CLKINVX1)                            0.18      15.18 f
+  PE124/add_22/SUM[11] (PE_131_DW01_inc_0_DW01_inc_139)
+                                                          0.00      15.18 f
+  PE124/U31/Y (AOI32XL)                                   0.43      15.61 r
+  PE124/U32/Y (OAI21XL)                                   0.28      15.89 f
+  PE124/result_o_reg[11]/D (DFFQX1)                       0.00      15.89 f
+  data arrival time                                                 15.89
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE124/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE119/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U14474/Y (CLKBUFX2)                                     0.25       3.16 f
+  U13038/Y (BUFX4)                                        0.36       3.52 f
+  U16986/Y (CLKBUFX3)                                     0.88       4.40 f
+  U24273/Y (AOI222XL)                                     0.94       5.33 r
+  U24272/Y (INVX3)                                        0.37       5.70 f
+  PE119/llr_2_i[0] (PE_136)                               0.00       5.70 f
+  PE119/U53/Y (CLKINVX4)                                  0.15       5.85 r
+  PE119/add_0_root_add_15_ni/A[0] (PE_136_DW01_inc_2_DW01_inc_670)
+                                                          0.00       5.85 r
+  PE119/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)           0.35       6.20 r
+  PE119/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)           0.29       6.50 r
+  PE119/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)           0.27       6.77 r
+  PE119/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)           0.27       7.04 r
+  PE119/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)           0.27       7.32 r
+  PE119/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)           0.27       7.59 r
+  PE119/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)           0.27       7.87 r
+  PE119/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)           0.26       8.13 r
+  PE119/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)            0.36       8.48 r
+  PE119/add_0_root_add_15_ni/SUM[9] (PE_136_DW01_inc_2_DW01_inc_670)
+                                                          0.00       8.48 r
+  PE119/U21/Y (AO22X1)                                    0.65       9.14 r
+  PE119/U180/Y (OAI21XL)                                  0.40       9.54 f
+  PE119/U181/Y (OAI22XL)                                  0.58      10.12 r
+  PE119/U182/Y (AOI2BB2X1)                                0.24      10.36 f
+  PE119/U163/Y (OAI221X4)                                 0.54      10.90 r
+  PE119/U25/Y (INVX3)                                     0.34      11.23 f
+  PE119/U75/Y (AO22X1)                                    0.47      11.70 f
+  PE119/U24/Y (CLKINVX1)                                  0.22      11.93 r
+  PE119/add_22/A[0] (PE_136_DW01_inc_0_DW01_inc_144)      0.00      11.93 r
+  PE119/add_22/U1_1_1/CO (ADDHXL)                         0.37      12.29 r
+  PE119/add_22/U1_1_2/CO (ADDHX1)                         0.28      12.58 r
+  PE119/add_22/U1_1_3/CO (ADDHXL)                         0.36      12.94 r
+  PE119/add_22/U1_1_4/CO (ADDHX1)                         0.28      13.22 r
+  PE119/add_22/U1_1_5/CO (ADDHXL)                         0.36      13.58 r
+  PE119/add_22/U1_1_6/CO (ADDHX1)                         0.28      13.86 r
+  PE119/add_22/U1_1_7/CO (ADDHXL)                         0.36      14.23 r
+  PE119/add_22/U1_1_8/CO (ADDHX1)                         0.29      14.52 r
+  PE119/add_22/U1_1_9/CO (ADDHX1)                         0.27      14.80 r
+  PE119/add_22/U1_1_10/CO (ADDHX1)                        0.25      15.05 r
+  PE119/add_22/U1/Y (CLKINVX1)                            0.14      15.19 f
+  PE119/add_22/SUM[11] (PE_136_DW01_inc_0_DW01_inc_144)
+                                                          0.00      15.19 f
+  PE119/U29/Y (AOI32XL)                                   0.42      15.61 r
+  PE119/U30/Y (OAI21XL)                                   0.28      15.89 f
+  PE119/result_o_reg[11]/D (DFFQX1)                       0.00      15.89 f
+  data arrival time                                                 15.89
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE119/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE42/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14280/Y (BUFX20)                                       0.19       2.28 r
+  U14195/Y (CLKINVX20)                                    0.16       2.44 f
+  U13558/Y (NAND2X6)                                      0.10       2.54 r
+  U14749/Y (NOR2BX4)                                      0.19       2.74 r
+  U13012/Y (BUFX20)                                       0.13       2.87 r
+  U13567/Y (AND3X6)                                       0.17       3.04 r
+  U13980/Y (CLKINVX4)                                     0.14       3.18 f
+  U14143/Y (CLKBUFX3)                                     0.70       3.89 f
+  U14200/Y (CLKBUFX6)                                     0.94       4.83 f
+  U12945/Y (OAI221X1)                                     0.95       5.78 r
+  PE42/llr_2_i[1] (PE_213)                                0.00       5.78 r
+  PE42/U13/Y (CLKINVX1)                                   0.28       6.06 f
+  PE42/add_0_root_add_15_ni/A[1] (PE_213_DW01_inc_2_DW01_inc_724)
+                                                          0.00       6.06 f
+  PE42/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.33       6.39 f
+  PE42/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)            0.28       6.67 f
+  PE42/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)            0.29       6.96 f
+  PE42/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.28       7.24 f
+  PE42/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.26       7.51 f
+  PE42/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.25       7.76 f
+  PE42/add_0_root_add_15_ni/U1_1_7/S (ADDHXL)             0.34       8.10 r
+  PE42/add_0_root_add_15_ni/SUM[7] (PE_213_DW01_inc_2_DW01_inc_724)
+                                                          0.00       8.10 r
+  PE42/U145/Y (AO22X1)                                    0.56       8.65 r
+  PE42/U182/Y (NOR2BX1)                                   0.26       8.92 f
+  PE42/U183/Y (OAI22XL)                                   0.53       9.45 r
+  PE42/U31/Y (OAI21X1)                                    0.34       9.79 f
+  PE42/U21/Y (OAI22XL)                                    0.55      10.35 r
+  PE42/U184/Y (AOI2BB2X1)                                 0.24      10.59 f
+  PE42/U170/Y (OAI221X4)                                  0.55      11.14 r
+  PE42/U48/Y (INVX8)                                      0.08      11.22 f
+  PE42/U47/Y (BUFX12)                                     0.17      11.39 f
+  PE42/U89/Y (AO22X1)                                     0.40      11.79 f
+  PE42/U27/Y (CLKINVX1)                                   0.22      12.02 r
+  PE42/add_22/A[0] (PE_213_DW01_inc_0_DW01_inc_221)       0.00      12.02 r
+  PE42/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.38 r
+  PE42/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.66 r
+  PE42/add_22/U1_1_3/CO (ADDHXL)                          0.34      13.00 r
+  PE42/add_22/U1_1_4/CO (ADDHXL)                          0.35      13.35 r
+  PE42/add_22/U1_1_5/CO (ADDHXL)                          0.38      13.73 r
+  PE42/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.01 r
+  PE42/add_22/U1_1_7/CO (ADDHXL)                          0.34      14.35 r
+  PE42/add_22/U1_1_8/CO (ADDHXL)                          0.38      14.73 r
+  PE42/add_22/U1_1_9/CO (ADDHX1)                          0.30      15.02 r
+  PE42/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.28 r
+  PE42/add_22/U1/Y (CLKINVX1)                             0.15      15.42 f
+  PE42/add_22/SUM[11] (PE_213_DW01_inc_0_DW01_inc_221)
+                                                          0.00      15.42 f
+  PE42/U29/Y (AOI32X1)                                    0.27      15.69 r
+  PE42/U28/Y (OAI21XL)                                    0.24      15.93 f
+  PE42/result_o_reg[11]/D (DFFQXL)                        0.00      15.93 f
+  data arrival time                                                 15.93
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE42/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.26      15.94
+  data required time                                                15.94
+  --------------------------------------------------------------------------
+  data required time                                                15.94
+  data arrival time                                                -15.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE89/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13968/Y (BUFX2)                                        0.54       3.76 f
+  U16981/Y (CLKBUFX3)                                     0.95       4.72 f
+  U24235/Y (AOI222XL)                                     0.84       5.56 r
+  U13845/Y (INVX1)                                        0.57       6.13 f
+  PE89/llr_2_i[0] (PE_166)                                0.00       6.13 f
+  PE89/U61/Y (CLKINVX4)                                   0.18       6.31 r
+  PE89/add_0_root_add_15_ni/A[0] (PE_166_DW01_inc_2_DW01_inc_703)
+                                                          0.00       6.31 r
+  PE89/add_0_root_add_15_ni/U1_1_1/CO (ADDHX1)            0.27       6.58 r
+  PE89/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.27       6.85 r
+  PE89/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.12 r
+  PE89/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.40 r
+  PE89/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.67 r
+  PE89/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.95 r
+  PE89/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.22 r
+  PE89/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.48 r
+  PE89/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.84 r
+  PE89/add_0_root_add_15_ni/SUM[9] (PE_166_DW01_inc_2_DW01_inc_703)
+                                                          0.00       8.84 r
+  PE89/U28/Y (AO22X1)                                     0.65       9.49 r
+  PE89/U180/Y (OAI21XL)                                   0.40       9.89 f
+  PE89/U181/Y (OAI22XL)                                   0.58      10.47 r
+  PE89/U182/Y (AOI2BB2X1)                                 0.24      10.72 f
+  PE89/U164/Y (OAI221X4)                                  0.54      11.25 r
+  PE89/U32/Y (INVX3)                                      0.34      11.59 f
+  PE89/U86/Y (AO22X1)                                     0.47      12.06 f
+  PE89/U31/Y (CLKINVX1)                                   0.22      12.28 r
+  PE89/add_22/A[0] (PE_166_DW01_inc_0_DW01_inc_174)       0.00      12.28 r
+  PE89/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE89/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE89/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.29 r
+  PE89/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.57 r
+  PE89/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE89/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE89/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.58 r
+  PE89/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE89/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE89/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.40 r
+  PE89/add_22/U1/Y (CLKINVX1)                             0.16      15.56 f
+  PE89/add_22/SUM[11] (PE_166_DW01_inc_0_DW01_inc_174)
+                                                          0.00      15.56 f
+  PE89/U45/Y (AOI32X2)                                    0.20      15.77 r
+  PE89/U44/Y (OAI21X1)                                    0.17      15.94 f
+  PE89/result_o_reg[11]/D (DFFQXL)                        0.00      15.94 f
+  data arrival time                                                 15.94
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE89/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE90/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U17144/Y (CLKBUFX3)                                     0.52       3.75 f
+  U16976/Y (CLKBUFX3)                                     0.95       4.70 f
+  U24236/Y (AOI222XL)                                     0.84       5.54 r
+  U13847/Y (INVX1)                                        0.57       6.11 f
+  PE90/llr_2_i[0] (PE_165)                                0.00       6.11 f
+  PE90/U62/Y (CLKINVX4)                                   0.18       6.29 r
+  PE90/add_0_root_add_15_ni/A[0] (PE_165_DW01_inc_2_DW01_inc_704)
+                                                          0.00       6.29 r
+  PE90/add_0_root_add_15_ni/U1_1_1/CO (ADDHX1)            0.27       6.56 r
+  PE90/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)            0.27       6.83 r
+  PE90/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)            0.27       7.11 r
+  PE90/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)            0.27       7.38 r
+  PE90/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)            0.27       7.65 r
+  PE90/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)            0.27       7.93 r
+  PE90/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)            0.27       8.20 r
+  PE90/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.26       8.46 r
+  PE90/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.36       8.82 r
+  PE90/add_0_root_add_15_ni/SUM[9] (PE_165_DW01_inc_2_DW01_inc_704)
+                                                          0.00       8.82 r
+  PE90/U30/Y (AO22X1)                                     0.65       9.47 r
+  PE90/U3/Y (OR2X1)                                       0.25       9.72 r
+  PE90/U4/Y (NAND2X1)                                     0.21       9.93 f
+  PE90/U182/Y (OAI22XL)                                   0.55      10.47 r
+  PE90/U183/Y (AOI2BB2X1)                                 0.24      10.71 f
+  PE90/U165/Y (OAI221X4)                                  0.54      11.25 r
+  PE90/U34/Y (INVX3)                                      0.34      11.59 f
+  PE90/U87/Y (AO22X1)                                     0.47      12.06 f
+  PE90/U32/Y (CLKINVX1)                                   0.22      12.28 r
+  PE90/add_22/A[0] (PE_165_DW01_inc_0_DW01_inc_173)       0.00      12.28 r
+  PE90/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.65 r
+  PE90/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.93 r
+  PE90/add_22/U1_1_3/CO (ADDHXL)                          0.36      13.29 r
+  PE90/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.57 r
+  PE90/add_22/U1_1_5/CO (ADDHXL)                          0.36      13.94 r
+  PE90/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.22 r
+  PE90/add_22/U1_1_7/CO (ADDHXL)                          0.36      14.58 r
+  PE90/add_22/U1_1_8/CO (ADDHX1)                          0.29      14.88 r
+  PE90/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE90/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.40 r
+  PE90/add_22/U1/Y (CLKINVX1)                             0.16      15.56 f
+  PE90/add_22/SUM[11] (PE_165_DW01_inc_0_DW01_inc_173)
+                                                          0.00      15.56 f
+  PE90/U46/Y (AOI32X2)                                    0.20      15.77 r
+  PE90/U45/Y (OAI21X1)                                    0.17      15.94 f
+  PE90/result_o_reg[11]/D (DFFQXL)                        0.00      15.94 f
+  data arrival time                                                 15.94
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE90/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE10/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14152/Y (INVXL)                                        0.13       2.22 f
+  U13557/Y (AND2X4)                                       0.21       2.43 f
+  U21459/Y (CLKBUFX3)                                     0.22       2.66 f
+  U13604/Y (BUFX4)                                        0.19       2.85 f
+  U18258/Y (CLKBUFX3)                                     0.20       3.05 f
+  U14088/Y (BUFX6)                                        0.27       3.32 f
+  U13568/Y (NOR2BX1)                                      0.37       3.69 f
+  U13342/Y (BUFX12)                                       0.23       3.92 f
+  U13347/Y (BUFX12)                                       0.47       4.39 f
+  U23049/Y (AOI222XL)                                     0.84       5.23 r
+  U13113/Y (NAND2X2)                                      0.18       5.42 f
+  PE10/llr_2_i[0] (PE_245)                                0.00       5.42 f
+  PE10/U3/Y (CLKINVX3)                                    0.13       5.55 r
+  PE10/U4/Y (INVX6)                                       0.11       5.66 f
+  PE10/U63/Y (CLKINVX6)                                   0.07       5.73 r
+  PE10/add_0_root_add_15_ni/A[0] (PE_245_DW01_inc_2_DW01_inc_766)
+                                                          0.00       5.73 r
+  PE10/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.31       6.04 r
+  PE10/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)            0.35       6.39 r
+  PE10/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)            0.35       6.75 r
+  PE10/add_0_root_add_15_ni/U1_1_4/CO (ADDHXL)            0.35       7.10 r
+  PE10/add_0_root_add_15_ni/U1_1_5/CO (ADDHXL)            0.35       7.45 r
+  PE10/add_0_root_add_15_ni/U1_1_6/CO (ADDHXL)            0.35       7.81 r
+  PE10/add_0_root_add_15_ni/U1_1_7/S (ADDHXL)             0.41       8.21 r
+  PE10/add_0_root_add_15_ni/SUM[7] (PE_245_DW01_inc_2_DW01_inc_766)
+                                                          0.00       8.21 r
+  PE10/U147/Y (AO22X1)                                    0.56       8.77 r
+  PE10/U47/Y (NAND2BXL)                                   0.39       9.16 f
+  PE10/U46/Y (OAI222X1)                                   0.59       9.76 r
+  PE10/U26/Y (OAI222X1)                                   0.44      10.20 f
+  PE10/U185/Y (AOI2BB2X1)                                 0.39      10.59 f
+  PE10/U172/Y (OAI221X4)                                  0.55      11.14 r
+  PE10/U45/Y (INVX8)                                      0.08      11.22 f
+  PE10/U44/Y (BUFX12)                                     0.17      11.39 f
+  PE10/U87/Y (AO22X1)                                     0.40      11.79 f
+  PE10/U32/Y (CLKINVX1)                                   0.22      12.01 r
+  PE10/add_22/A[0] (PE_245_DW01_inc_0_DW01_inc_253)       0.00      12.01 r
+  PE10/add_22/U1_1_1/CO (ADDHXL)                          0.37      12.38 r
+  PE10/add_22/U1_1_2/CO (ADDHX1)                          0.28      12.66 r
+  PE10/add_22/U1_1_3/CO (ADDHXL)                          0.34      13.00 r
+  PE10/add_22/U1_1_4/CO (ADDHXL)                          0.35      13.35 r
+  PE10/add_22/U1_1_5/CO (ADDHXL)                          0.38      13.73 r
+  PE10/add_22/U1_1_6/CO (ADDHX1)                          0.28      14.01 r
+  PE10/add_22/U1_1_7/CO (ADDHXL)                          0.34      14.35 r
+  PE10/add_22/U1_1_8/CO (ADDHXL)                          0.38      14.73 r
+  PE10/add_22/U1_1_9/CO (ADDHX1)                          0.30      15.02 r
+  PE10/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.27 r
+  PE10/add_22/U1/Y (CLKINVX1)                             0.15      15.42 f
+  PE10/add_22/SUM[11] (PE_245_DW01_inc_0_DW01_inc_253)
+                                                          0.00      15.42 f
+  PE10/U35/Y (AOI32X1)                                    0.27      15.69 r
+  PE10/U34/Y (OAI21XL)                                    0.24      15.93 f
+  PE10/result_o_reg[11]/D (DFFQXL)                        0.00      15.93 f
+  data arrival time                                                 15.93
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE10/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.26      15.94
+  data required time                                                15.94
+  --------------------------------------------------------------------------
+  data required time                                                15.94
+  data arrival time                                                -15.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE23/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.34       0.34 f
+  U14062/Y (INVXL)                                        0.41       0.75 r
+  U14063/Y (NOR2X4)                                       0.15       0.90 f
+  U15354/Y (XOR2X4)                                       0.19       1.09 r
+  U14064/Y (CLKINVX12)                                    0.12       1.20 f
+  U13584/Y (INVX8)                                        0.08       1.29 r
+  U13569/Y (NOR3X6)                                       0.08       1.36 f
+  U14338/Y (INVX6)                                        0.08       1.45 r
+  U19752/Y (CLKBUFX3)                                     0.19       1.64 r
+  U14538/Y (BUFX8)                                        0.13       1.76 r
+  U17559/Y (CLKBUFX3)                                     0.19       1.96 r
+  U14150/Y (BUFX12)                                       0.13       2.09 r
+  U14152/Y (INVXL)                                        0.13       2.22 f
+  U13557/Y (AND2X4)                                       0.21       2.43 f
+  U21459/Y (CLKBUFX3)                                     0.22       2.66 f
+  U13604/Y (BUFX4)                                        0.19       2.85 f
+  U18258/Y (CLKBUFX3)                                     0.20       3.05 f
+  U14088/Y (BUFX6)                                        0.27       3.32 f
+  U13568/Y (NOR2BX1)                                      0.37       3.69 f
+  U13343/Y (BUFX4)                                        0.34       4.04 f
+  U12996/Y (BUFX16)                                       0.44       4.47 f
+  U23273/Y (AOI222XL)                                     0.79       5.26 r
+  U13159/Y (NAND2X2)                                      0.20       5.46 f
+  PE23/llr_2_i[0] (PE_232)                                0.00       5.46 f
+  PE23/U7/Y (BUFX8)                                       0.20       5.66 f
+  PE23/U42/Y (CLKINVX4)                                   0.08       5.74 r
+  PE23/add_0_root_add_15_ni/A[0] (PE_232_DW01_inc_2_DW01_inc_753)
+                                                          0.00       5.74 r
+  PE23/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)            0.32       6.06 r
+  PE23/add_0_root_add_15_ni/U1_1_2/CO (ADDHXL)            0.35       6.41 r
+  PE23/add_0_root_add_15_ni/U1_1_3/CO (ADDHXL)            0.35       6.76 r
+  PE23/add_0_root_add_15_ni/U1_1_4/CO (ADDHXL)            0.35       7.12 r
+  PE23/add_0_root_add_15_ni/U1_1_5/CO (ADDHXL)            0.35       7.47 r
+  PE23/add_0_root_add_15_ni/U1_1_6/CO (ADDHXL)            0.35       7.82 r
+  PE23/add_0_root_add_15_ni/U1_1_7/CO (ADDHXL)            0.38       8.20 r
+  PE23/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)            0.28       8.48 r
+  PE23/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)             0.38       8.86 r
+  PE23/add_0_root_add_15_ni/SUM[9] (PE_232_DW01_inc_2_DW01_inc_753)
+                                                          0.00       8.86 r
+  PE23/U29/Y (AO22X2)                                     0.44       9.31 r
+  PE23/U3/Y (OR2X1)                                       0.24       9.55 r
+  PE23/U4/Y (NAND2X1)                                     0.20       9.75 f
+  PE23/U183/Y (OAI22XL)                                   0.54      10.29 r
+  PE23/U184/Y (AOI2BB2X1)                                 0.24      10.53 f
+  PE23/U170/Y (OAI221X4)                                  0.54      11.07 r
+  PE23/U36/Y (INVX4)                                      0.27      11.34 f
+  PE23/U86/Y (AO22X1)                                     0.45      11.79 f
+  PE23/U32/Y (CLKINVX1)                                   0.22      12.01 r
+  PE23/add_22/A[0] (PE_232_DW01_inc_0_DW01_inc_240)       0.00      12.01 r
+  PE23/add_22/U1_1_1/CO (ADDHXL)                          0.34      12.35 r
+  PE23/add_22/U1_1_2/CO (ADDHXL)                          0.38      12.73 r
+  PE23/add_22/U1_1_3/CO (ADDHX1)                          0.28      13.01 r
+  PE23/add_22/U1_1_4/CO (ADDHXL)                          0.34      13.35 r
+  PE23/add_22/U1_1_5/CO (ADDHXL)                          0.35      13.70 r
+  PE23/add_22/U1_1_6/CO (ADDHXL)                          0.38      14.08 r
+  PE23/add_22/U1_1_7/CO (ADDHX1)                          0.28      14.36 r
+  PE23/add_22/U1_1_8/CO (ADDHXL)                          0.36      14.73 r
+  PE23/add_22/U1_1_9/CO (ADDHX1)                          0.29      15.02 r
+  PE23/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.27 r
+  PE23/add_22/U1/Y (CLKINVX1)                             0.15      15.42 f
+  PE23/add_22/SUM[11] (PE_232_DW01_inc_0_DW01_inc_240)
+                                                          0.00      15.42 f
+  PE23/U35/Y (AOI32X1)                                    0.27      15.69 r
+  PE23/U34/Y (OAI21XL)                                    0.24      15.93 f
+  PE23/result_o_reg[11]/D (DFFQXL)                        0.00      15.93 f
+  data arrival time                                                 15.93
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE23/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.26      15.94
+  data required time                                                15.94
+  --------------------------------------------------------------------------
+  data required time                                                15.94
+  data arrival time                                                -15.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE127/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U19752/Y (CLKBUFX3)                                     0.22       1.65 f
+  U14538/Y (BUFX8)                                        0.15       1.80 f
+  U17559/Y (CLKBUFX3)                                     0.23       2.03 f
+  U14150/Y (BUFX12)                                       0.16       2.19 f
+  U14152/Y (INVXL)                                        0.25       2.43 r
+  U13557/Y (AND2X4)                                       0.25       2.68 r
+  U14749/Y (NOR2BX4)                                      0.10       2.78 f
+  U13012/Y (BUFX20)                                       0.13       2.91 f
+  U13029/Y (CLKBUFX4)                                     0.32       3.22 f
+  U13974/Y (BUFX2)                                        0.42       3.64 f
+  U13104/Y (CLKBUFX4)                                     0.74       4.38 f
+  U24285/Y (AOI222XL)                                     0.90       5.28 r
+  U24284/Y (INVX3)                                        0.37       5.65 f
+  PE127/llr_2_i[0] (PE_128)                               0.00       5.65 f
+  PE127/U15/Y (INVX3)                                     0.18       5.82 r
+  PE127/add_0_root_add_15_ni/A[0] (PE_128_DW01_inc_2_DW01_inc_677)
+                                                          0.00       5.82 r
+  PE127/add_0_root_add_15_ni/U1_1_1/CO (ADDHXL)           0.36       6.18 r
+  PE127/add_0_root_add_15_ni/U1_1_2/CO (ADDHX1)           0.29       6.47 r
+  PE127/add_0_root_add_15_ni/U1_1_3/CO (ADDHX1)           0.27       6.75 r
+  PE127/add_0_root_add_15_ni/U1_1_4/CO (ADDHX1)           0.27       7.02 r
+  PE127/add_0_root_add_15_ni/U1_1_5/CO (ADDHX1)           0.27       7.30 r
+  PE127/add_0_root_add_15_ni/U1_1_6/CO (ADDHX1)           0.27       7.57 r
+  PE127/add_0_root_add_15_ni/U1_1_7/CO (ADDHX1)           0.27       7.84 r
+  PE127/add_0_root_add_15_ni/U1_1_8/CO (ADDHX1)           0.26       8.10 r
+  PE127/add_0_root_add_15_ni/U1_1_9/S (ADDHXL)            0.36       8.46 r
+  PE127/add_0_root_add_15_ni/SUM[9] (PE_128_DW01_inc_2_DW01_inc_677)
+                                                          0.00       8.46 r
+  PE127/U22/Y (AO22X1)                                    0.65       9.11 r
+  PE127/U3/Y (OR2X1)                                      0.25       9.36 r
+  PE127/U4/Y (NAND2X1)                                    0.21       9.57 f
+  PE127/U182/Y (OAI22XL)                                  0.55      10.12 r
+  PE127/U183/Y (AOI2BB2X1)                                0.24      10.36 f
+  PE127/U165/Y (OAI221X4)                                 0.54      10.89 r
+  PE127/U25/Y (INVX3)                                     0.34      11.23 f
+  PE127/U77/Y (AO22X1)                                    0.47      11.70 f
+  PE127/U24/Y (CLKINVX1)                                  0.22      11.92 r
+  PE127/add_22/A[0] (PE_128_DW01_inc_0_DW01_inc_136)      0.00      11.92 r
+  PE127/add_22/U1_1_1/CO (ADDHXL)                         0.37      12.29 r
+  PE127/add_22/U1_1_2/CO (ADDHX1)                         0.28      12.57 r
+  PE127/add_22/U1_1_3/CO (ADDHXL)                         0.36      12.93 r
+  PE127/add_22/U1_1_4/CO (ADDHX1)                         0.28      13.22 r
+  PE127/add_22/U1_1_5/CO (ADDHXL)                         0.36      13.58 r
+  PE127/add_22/U1_1_6/CO (ADDHX1)                         0.28      13.86 r
+  PE127/add_22/U1_1_7/CO (ADDHXL)                         0.36      14.22 r
+  PE127/add_22/U1_1_8/CO (ADDHX1)                         0.29      14.52 r
+  PE127/add_22/U1_1_9/CO (ADDHX1)                         0.27      14.79 r
+  PE127/add_22/U1_1_10/CO (ADDHX1)                        0.25      15.04 r
+  PE127/add_22/U1/Y (CLKINVX1)                            0.14      15.18 f
+  PE127/add_22/SUM[11] (PE_128_DW01_inc_0_DW01_inc_136)
+                                                          0.00      15.18 f
+  PE127/U33/Y (AOI32XL)                                   0.42      15.61 r
+  PE127/U34/Y (OAI21XL)                                   0.28      15.89 f
+  PE127/result_o_reg[11]/D (DFFQX1)                       0.00      15.89 f
+  data arrival time                                                 15.89
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE127/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE123/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U13954/Y (CLKBUFX2)                                     0.24       1.67 f
+  U19751/Y (CLKBUFX3)                                     0.33       2.00 f
+  U14542/Y (CLKBUFX2)                                     0.50       2.50 f
+  U17583/Y (CLKBUFX3)                                     0.60       3.10 f
+  U14281/Y (CLKBUFX3)                                     0.97       4.07 f
+  U14181/Y (OAI22X1)                                      1.10       5.17 r
+  PE123/llr_1_i[0] (PE_132)                               0.00       5.17 r
+  PE123/U164/Y (CLKINVX1)                                 0.45       5.62 f
+  PE123/add_0_root_add_12_ni/A[0] (PE_132_DW01_inc_1_DW01_inc_622)
+                                                          0.00       5.62 f
+  PE123/add_0_root_add_12_ni/U1_1_1/CO (ADDHXL)           0.36       5.98 f
+  PE123/add_0_root_add_12_ni/U1_1_2/CO (ADDHXL)           0.28       6.26 f
+  PE123/add_0_root_add_12_ni/U1_1_3/CO (ADDHXL)           0.28       6.54 f
+  PE123/add_0_root_add_12_ni/U1_1_4/CO (ADDHXL)           0.28       6.82 f
+  PE123/add_0_root_add_12_ni/U1_1_5/CO (ADDHXL)           0.28       7.10 f
+  PE123/add_0_root_add_12_ni/U1_1_6/CO (ADDHXL)           0.28       7.38 f
+  PE123/add_0_root_add_12_ni/U1_1_7/CO (ADDHXL)           0.28       7.66 f
+  PE123/add_0_root_add_12_ni/U1_1_8/S (ADDHXL)            0.28       7.93 f
+  PE123/add_0_root_add_12_ni/SUM[8] (PE_132_DW01_inc_1_DW01_inc_622)
+                                                          0.00       7.93 f
+  PE123/U35/Y (AO22X1)                                    0.62       8.56 f
+  PE123/U179/Y (OAI22XL)                                  0.54       9.10 r
+  PE123/U180/Y (OAI21XL)                                  0.44       9.53 f
+  PE123/U181/Y (OAI22XL)                                  0.58      10.12 r
+  PE123/U182/Y (AOI2BB2X1)                                0.24      10.36 f
+  PE123/U163/Y (OAI221X4)                                 0.54      10.89 r
+  PE123/U23/Y (INVX3)                                     0.34      11.23 f
+  PE123/U77/Y (AO22X1)                                    0.47      11.70 f
+  PE123/U22/Y (CLKINVX1)                                  0.22      11.92 r
+  PE123/add_22/A[0] (PE_132_DW01_inc_0_DW01_inc_140)      0.00      11.92 r
+  PE123/add_22/U1_1_1/CO (ADDHXL)                         0.37      12.29 r
+  PE123/add_22/U1_1_2/CO (ADDHX1)                         0.28      12.57 r
+  PE123/add_22/U1_1_3/CO (ADDHXL)                         0.36      12.93 r
+  PE123/add_22/U1_1_4/CO (ADDHX1)                         0.28      13.22 r
+  PE123/add_22/U1_1_5/CO (ADDHXL)                         0.36      13.58 r
+  PE123/add_22/U1_1_6/CO (ADDHX1)                         0.28      13.86 r
+  PE123/add_22/U1_1_7/CO (ADDHXL)                         0.36      14.22 r
+  PE123/add_22/U1_1_8/CO (ADDHX1)                         0.29      14.52 r
+  PE123/add_22/U1_1_9/CO (ADDHX1)                         0.27      14.79 r
+  PE123/add_22/U1_1_10/CO (ADDHX1)                        0.25      15.04 r
+  PE123/add_22/U1/Y (CLKINVX1)                            0.14      15.18 f
+  PE123/add_22/SUM[11] (PE_132_DW01_inc_0_DW01_inc_140)
+                                                          0.00      15.18 f
+  PE123/U31/Y (AOI32XL)                                   0.42      15.61 r
+  PE123/U32/Y (OAI21XL)                                   0.28      15.89 f
+  PE123/result_o_reg[11]/D (DFFQX1)                       0.00      15.89 f
+  data arrival time                                                 15.89
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE123/result_o_reg[11]/CK (DFFQX1)                      0.00      16.20 r
+  library setup time                                     -0.30      15.90
+  data required time                                                15.90
+  --------------------------------------------------------------------------
+  data required time                                                15.90
+  data arrival time                                                -15.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: EX_counter_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: PE34/result_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  polar_decoder      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  EX_counter_reg[1]/CK (DFFHQX4)                          0.00 #     0.00 r
+  EX_counter_reg[1]/Q (DFFHQX4)                           0.38       0.38 r
+  U14065/Y (XNOR2X4)                                      0.24       0.63 r
+  U14161/Y (XNOR2X4)                                      0.22       0.85 r
+  U14022/Y (BUFX16)                                       0.19       1.04 r
+  U15147/Y (XNOR2X4)                                      0.15       1.19 f
+  U13569/Y (NOR3X6)                                       0.16       1.35 r
+  U14338/Y (INVX6)                                        0.08       1.43 f
+  U13976/Y (CLKBUFX2)                                     0.29       1.72 f
+  U13953/Y (BUFX2)                                        0.50       2.22 f
+  U17585/Y (CLKBUFX3)                                     0.85       3.07 f
+  U14460/Y (BUFX2)                                        0.72       3.79 f
+  U17011/Y (BUFX4)                                        0.61       4.40 f
+  U13682/Y (AO22X1)                                       0.76       5.16 f
+  PE34/llr_1_i[0] (PE_221)                                0.00       5.16 f
+  PE34/U43/Y (CLKINVX1)                                   0.31       5.47 r
+  PE34/add_0_root_add_12_ni/A[0] (PE_221_DW01_inc_1_DW01_inc_594)
+                                                          0.00       5.47 r
+  PE34/add_0_root_add_12_ni/U1_1_1/CO (ADDHXL)            0.35       5.82 r
+  PE34/add_0_root_add_12_ni/U1_1_2/CO (ADDHXL)            0.35       6.17 r
+  PE34/add_0_root_add_12_ni/U1_1_3/CO (ADDHXL)            0.35       6.52 r
+  PE34/add_0_root_add_12_ni/U1_1_4/CO (ADDHXL)            0.35       6.88 r
+  PE34/add_0_root_add_12_ni/U1_1_5/CO (ADDHXL)            0.35       7.23 r
+  PE34/add_0_root_add_12_ni/U1_1_6/CO (ADDHXL)            0.35       7.58 r
+  PE34/add_0_root_add_12_ni/U1_1_7/CO (ADDHXL)            0.35       7.94 r
+  PE34/add_0_root_add_12_ni/U1_1_8/CO (ADDHXL)            0.35       8.29 r
+  PE34/add_0_root_add_12_ni/U1_1_9/S (ADDHXL)             0.41       8.70 r
+  PE34/add_0_root_add_12_ni/SUM[9] (PE_221_DW01_inc_1_DW01_inc_594)
+                                                          0.00       8.70 r
+  PE34/U39/Y (AO22X1)                                     0.46       9.16 r
+  PE34/U3/Y (INVX1)                                       0.28       9.43 f
+  PE34/U181/Y (OAI21XL)                                   0.74      10.18 r
+  PE34/U182/Y (OAI22XL)                                   0.37      10.55 f
+  PE34/U183/Y (AOI2BB2X1)                                 0.35      10.90 r
+  PE34/U168/Y (OAI221X4)                                  0.51      11.41 f
+  PE34/U88/Y (AO22X1)                                     0.53      11.94 f
+  PE34/U32/Y (CLKINVX1)                                   0.22      12.16 r
+  PE34/add_22/A[0] (PE_221_DW01_inc_0_DW01_inc_229)       0.00      12.16 r
+  PE34/add_22/U1_1_1/CO (ADDHXL)                          0.34      12.50 r
+  PE34/add_22/U1_1_2/CO (ADDHXL)                          0.35      12.86 r
+  PE34/add_22/U1_1_3/CO (ADDHXL)                          0.38      13.23 r
+  PE34/add_22/U1_1_4/CO (ADDHX1)                          0.28      13.52 r
+  PE34/add_22/U1_1_5/CO (ADDHXL)                          0.34      13.85 r
+  PE34/add_22/U1_1_6/CO (ADDHXL)                          0.35      14.21 r
+  PE34/add_22/U1_1_7/CO (ADDHXL)                          0.38      14.58 r
+  PE34/add_22/U1_1_8/CO (ADDHX1)                          0.30      14.88 r
+  PE34/add_22/U1_1_9/CO (ADDHX1)                          0.27      15.15 r
+  PE34/add_22/U1_1_10/CO (ADDHX1)                         0.25      15.41 r
+  PE34/add_22/U1/Y (CLKINVX1)                             0.16      15.57 f
+  PE34/add_22/SUM[11] (PE_221_DW01_inc_0_DW01_inc_229)
+                                                          0.00      15.57 f
+  PE34/U40/Y (AOI32X2)                                    0.20      15.77 r
+  PE34/U35/Y (OAI21X1)                                    0.17      15.94 f
+  PE34/result_o_reg[11]/D (DFFQXL)                        0.00      15.94 f
+  data arrival time                                                 15.94
+
+  clock clk (rise edge)                                  16.30      16.30
+  clock network delay (ideal)                             0.00      16.30
+  clock uncertainty                                      -0.10      16.20
+  PE34/result_o_reg[11]/CK (DFFQXL)                       0.00      16.20 r
+  library setup time                                     -0.25      15.95
+  data required time                                                15.95
+  --------------------------------------------------------------------------
+  data required time                                                15.95
+  data arrival time                                                -15.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
