@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : polar_decoder
+Version: R-2020.09-SP5
+Date   : Wed Dec 14 19:00:35 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'polar_decoder' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    slow (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/slow.db)
+
+Number of ports:                          353
+Number of nets:                        117283
+Number of cells:                       117013
+Number of combinational cells:         104953
+Number of sequential cells:             12057
+Number of macros/black boxes:               0
+Number of buf/inv:                      19550
+Number of references:                     198
+
+Combinational area:            1023878.467363
+Buf/Inv area:                   111576.890768
+Noncombinational area:          341819.023479
+Macro/Black Box area:                0.000000
+Net Interconnect area:        11841913.748566
+
+Total cell area:               1365697.490842
+Total area:                   13207611.239408
+1

@@ -1,0 +1,60 @@
+****************************************
+Report : Time Based Power
+	-verbose
+Design : polar_decoder
+Version: T-2022.03
+Date   : Sun Dec 18 06:12:44 2022
+****************************************
+
+Sampling Interval: 0.001 ns
+
+Analysis Mode: module_en
+
+Library(s) Used:
+
+    slow (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/orig_lib/aci/sc-x/synopsys/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+<no wire load model is set>
+
+Power-specific unit information :
+    Voltage Units = 1 V
+    Capacitance Units = 1 pf
+    Time Units = 1 ns
+    Dynamic Power Units = 1 W
+    Leakage Power Units = 1 W
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           8.764e-03 1.244e-03 6.481e-05    0.0101 (53.86%)  i
+register                6.542e-04 4.075e-05 2.187e-04 9.136e-04 ( 4.89%)  
+combinational           4.518e-03 2.567e-03 6.305e-04 7.715e-03 (41.25%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 3.852e-03   (20.60%)
+  Cell Internal Power  =    0.0139   (74.51%)
+  Cell Leakage Power   = 9.140e-04   ( 4.89%)
+                         ---------
+Total Power            =    0.0187  (100.00%)
+
+X Transition Power     = 1.203e-07
+Glitching Power        = 2.166e-05
+
+Peak Power             =    0.6027
+Peak Time              = 25534.640
+
+1
